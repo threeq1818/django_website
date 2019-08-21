@@ -75,7 +75,7 @@ class Book(models.Model):
 
     display_genre.shor_description = 'Genre'
 
-    def get_absulute_url(self):
+    def get_absolute_url(self):
         """Returns the url to access a particular book instance."""
         return reverse('book-detail', args=[str(self.id)])
 

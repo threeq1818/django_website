@@ -6,6 +6,7 @@ from django.db import models
 # Used to generate URLs by reversing the URL, patterns
 from django.urls import reverse
 
+
 # Create your models here.
 
 
@@ -91,7 +92,7 @@ class BookInstance(models.Model):
     book = models.ForeignKey('Book', on_delete=models.SET_NULL, null=True)
     imprint = models.CharField(max_length=200)
     due_back = models.DateField(null=True, blank=True)
-    borrow = models.ForeignKey(
+    borrower = models.ForeignKey(
         User, on_delete=models.SET_NULL, null=True, blank=True)
 
     @property

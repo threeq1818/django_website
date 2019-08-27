@@ -27,9 +27,10 @@ class MyModelName(models.Model):
         """String for representing the MyModelName object (in Admin site etc.)."""
         return self.my_field_name
 
-    class Meta:
-        ordering = ['title', '-pubdate']
-        verboss_name = 'BetterName'
+
+class Meta:
+    ordering = ['title', '-pubdate']
+    verboss_name = 'BetterName'
 
 
 class Genre(models.Model):
